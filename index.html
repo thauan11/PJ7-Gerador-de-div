@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Victor Andrade">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+        <style>
+            * {
+                font-family: 'Comfortaa';
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #1d1d1d;
+                color: whitesmoke;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #maxWidth {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: darkseagreen;
+            }
+
+            #maxWidth span{
+                height: 0;
+                overflow: hidden;
+            }
+
+            #nav-botao {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 0;
+                padding: 10px;
+                width: 100%;
+                transition: background 2s;
+                background-color: #1d1d1d;
+                border-top: 1px solid whitesmoke;
+            }
+
+            #nav-botao input{
+                border: 2px solid #1d1d1d;
+                border-radius: 5px;
+                width: 200px;
+                height: 50px;
+                cursor: pointer;
+                background-color: whitesmoke;
+                transition: border-radius 1s;
+            }
+
+            #nav-botao input:hover{
+                background-color: darkseagreen;
+                border: 1px solid whitesmoke;
+                color: whitesmoke;
+                border-radius: 50px;
+            }
+
+            #quadrado {
+                border: 1px solid whitesmoke;
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                display: inline-block;
+                float: left;
+                width: 17%;
+            }
+
+            .lorem {
+                float: right;
+                width: 80%;
+            }
+
+            #centralizar {
+                max-width: 675px;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #flex-justo {
+                margin-top: 30px;
+                margin-bottom: 120px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #centralizar:hover #flex-justo #borda:hover #quadrado {
+                border: 1px solid black;
+                color: #1d1d1d;
+                background-color: darkseagreen;
+            }
+
+            #centralizar:hover #flex-justo #borda:hover {
+                border: 2px solid black;
+                color: #1d1d1d;
+                background-color: whitesmoke;
+            }
+
+            #borda {
+                border: 2px solid whitesmoke;
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                transition: background 400ms;
+            }
+
+            #borda:hover {
+                cursor: crosshair;
+            }
+
+            #principal {
+                max-width: 1200px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-image: url(javascript.png);
+            }
+        </style>
+    </head>
+
+    <body onscroll="fixaBarra()" onblur="voltaBarra()">
+        <div id="maxWidth">
+
+            <div id="principal">
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis unde repudiandae temporibus nesciunt quod ipsam necessitatibus ad rerum, eum id impedit provident expedita officiis aspernatur sint atque debitis consequuntur! Aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ullam aut quibusdam accusamus delectus ratione! Blanditiis pariatur veniam quibusdam soluta iure voluptatem mollitia dignissimos optio minima, nesciunt tenetur assumenda ratione!</span>
+            </div>
+
+        </div>
+    
+        <div id="centralizar">
+            <div id="flex-justo">
+                <script src="script.js"></script>
+            </div>
+        </div>
+
+        <div id="nav-botao">
+            <input type="button" id="btn" value="+1" onclick="addSection()">
+        </div>
+
+    </body>
+</html>
